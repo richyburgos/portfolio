@@ -9,7 +9,7 @@
           style="color: #fff"/>
     </div>
     <p class="text-white">{{ currentTime }}</p>
-    <button class="btn btn-sm btn-outline-dark text-white border-white" @click="toggleFormat">{{ linkText }}</button>
+    <button class="btn btn-sm btn-outline-dark text-white border-white" @click="toggleFormat">{{ hrShiftText }}</button>
   </div>
 </template>
 
@@ -29,7 +29,7 @@ export default {
       const date = DateTime.now().setZone('America/Belize').toLocaleString({ day: 'numeric', month: 'long', year: 'numeric' });
       return `${date} | ${DateTime.now().setZone('America/Belize').toFormat(format)}`;
     },
-    linkText() {
+    hrShiftText() {
       return this.is12HourFormat ? 'Show 24 hrs' : 'Show 12 hrs';
     },
   },
