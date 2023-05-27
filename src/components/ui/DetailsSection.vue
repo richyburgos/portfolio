@@ -1,5 +1,5 @@
 <template>
-  <div class="overview-section p-3 p-lg-5">
+  <div class="overview-section p-3 px-lg-5">
     <div class="container">
       <h2 class="section-title font-weight-bold mb-3">My Experience</h2>
       <div class="section-intro mb-5">
