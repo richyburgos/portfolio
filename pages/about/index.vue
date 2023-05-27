@@ -2,8 +2,6 @@
   <div class="container">
     <div class="row">
       <article>
-
-
         <div class="text-center">
           <img
               style="border-radius: 50%"
@@ -14,8 +12,7 @@
         <h1 class="text-center">Who Am I?</h1>
         <p>
           I am a highly motivated programmer from Belize, a small country in Central America which is in the Central
-          Standard Time zone (GMT-6). With over 5 years of experience in application development and troubleshooting
-          for
+          Standard Time zone (GMT-6). With over 5 years of experience in application development and troubleshooting for
           service and distribution companies, I thrive on solving problems and finding innovative solutions.
         </p>
         <div class="row text-center">
@@ -31,15 +28,12 @@
         </div>
         <p>
           As a team player, I believe in sharing my experiences with colleagues to improve our productivity and
-          knowledge
-          base. I am always open to learning and constructive criticism to better my work ethic. I enjoy creating
-          user-friendly and dynamic graphical user interfaces (GUIs) that are aesthetically pleasing, and I am
-          particularly
-          skilled in wireframing GUIs using Axure RP 9.
+          knowledge base. I am always open to learning and constructive criticism to better my work ethic. I enjoy
+          creating user-friendly and dynamic graphical user interfaces (GUIs) that are aesthetically pleasing, and I am
+          particularly skilled in wireframing GUIs using Axure RP 9.
         </p>
         <p>
-          I am eager to take on new challenges and opportunities to broaden my knowledge of application programming,
-          and
+          I am eager to take on new challenges and opportunities to broaden my knowledge of application programming, and
           I am excited about contributing to your company's progress.
         </p>
       </article>

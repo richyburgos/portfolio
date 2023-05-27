@@ -38,6 +38,7 @@ export default {
 p, li {
   font-size: 14px;
 }
+
 .gray-clr {
   color: #A9A9A9;
 }

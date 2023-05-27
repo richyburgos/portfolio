@@ -3,9 +3,7 @@
     <h1 class="blog-name pt-lg-4 mb-0"><a
         class="no-text-decoration"
         href="/">Richard's Resume</a></h1>
-
     <nav class="navbar navbar-expand-lg navbar-dark">
-
       <button
           class="navbar-toggler"
           type="button"
@@ -16,7 +14,6 @@
           aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div
           id="navigation"
           class="collapse navbar-collapse flex-column">
@@ -25,7 +22,6 @@
               class="profile-image mb-3 rounded-circle mx-auto"
               src="@/assets/images/self-portrait.jpeg"
               alt="image">
-
           <div class="bio mb-3">
             My name is Richard Burgos, a web developer with over {{ yearsOfExperience }} of experience. I come from
             a small country named Belize in Central America whose native language is english and timezone is CST(GMT-6).
@@ -83,7 +79,6 @@
           </ul>
           <hr>
         </div>
-
         <ul class="navbar-nav flex-column text-start">
           <li class="nav-item">
             <NuxtLink
@@ -119,7 +114,6 @@
             </NuxtLink>
           </li>
         </ul>
-
         <div class="my-2 my-md-3">
           <a
               class="btn btn-primary"
