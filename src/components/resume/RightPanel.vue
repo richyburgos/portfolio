@@ -116,6 +116,7 @@ import WorkExperienceItem from "~/src/components/resume/WorkExperienceItem.vue";
 import EducationItem from "~/src/components/resume/EducationItem.vue";
 import CertificationItem from "~/src/components/resume/CertificationItem.vue";
 import LeftPanel from "~/src/components/resume/LeftPanel.vue";
+
 export default {
   components: {LeftPanel, CertificationItem, EducationItem, WorkExperienceItem, FontAwesomeIcon},
   name: "RightPanel",

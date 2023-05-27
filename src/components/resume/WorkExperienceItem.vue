@@ -33,7 +33,10 @@
           v-for="project in projects"
           :key="project.title">
         {{ project.title }}
-        <ul class="list-group" v-if="project.tasks" v-for="task in project.tasks">
+        <ul
+            class="list-group"
+            v-if="project.tasks"
+            v-for="task in project.tasks">
           <li class="list-group-item">{{ task }}</li>
         </ul>
       </li>
