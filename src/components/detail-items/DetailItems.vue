@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="card-body">
-      <h5 class="card-title text-white">{{ title }}</h5>
+      <h5 class="card-title text-center">{{ title }}</h5>
       <p class="card-text">{{ content }}</p>
     </div>
   </div>
@@ -56,15 +56,6 @@ export default {
 
 .item-icon + .item-icon {
   margin-left: 10px;
-}
-
-.item-title {
-  font-size: 1rem;
-}
-
-.item-desc {
-  color: #4f4f4f;
-  font-size: 0.875rem;
 }
 
 .item-icon {
