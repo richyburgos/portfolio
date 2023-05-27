@@ -1,15 +1,15 @@
 <template>
   <IntroductionHeader/>
-<!--  <ProjectsInvolved/>-->
+  <DetailsSection/>
 </template>
 
 <script>
 import IntroductionHeader from "~/src/components/ui/IntroductionHeader.vue";
-import ProjectsInvolved from "~/src/components/ui/ProjectsInvolved.vue";
+import DetailsSection from "~/src/components/ui/DetailsSection.vue";
 
 export default {
   components: {
-    ProjectsInvolved,
+    DetailsSection,
     IntroductionHeader
   }
 }
