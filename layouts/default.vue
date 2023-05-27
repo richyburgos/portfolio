@@ -1,6 +1,5 @@
 <template>
-<!--  <PortfolioHeader/>-->
-  <PsuedoHeader/>
+  <PortfolioHeader/>
   <div class="main-wrapper">
     <slot/>
     <PortfolioFooter/>
@@ -10,9 +9,8 @@
 <script>
 import PortfolioHeader from "~/src/components/layout-layers/PortfolioHeader.vue";
 import PortfolioFooter from "~/src/components/layout-layers/PortfolioFooter.vue";
-import PsuedoHeader from "~/src/components/layout-layers/PsuedoHeader.vue";
 
 export default {
-  components: {PsuedoHeader, PortfolioFooter, PortfolioHeader}
+  components: { PortfolioFooter, PortfolioHeader}
 }
 </script>
