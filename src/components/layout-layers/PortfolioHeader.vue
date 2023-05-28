@@ -3,20 +3,29 @@
     <h1 class="blog-name pt-lg-4 mb-0"><a
         class="no-text-decoration"
         href="/">Richard's Resume</a></h1>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg">
       <button
-          class="navbar-toggler"
+          @click="toggleMenu"
+          class="navbar-toggler text-white border-white"
+          :class="{'collapsed' : showMenu}"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navigation"
           aria-controls="navigation"
-          aria-expanded="false"
+          :aria-expanded="showMenu"
           aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <font-awesome-icon
+            :icon="['fas', 'burger']"
+            :class="{'fa-rotate-90': showMenu}"
+            size="lg"
+            fixed-width
+        />
       </button>
       <div
           id="navigation"
-          class="collapse navbar-collapse flex-column">
+          class="navbar-collapse flex-column collapse"
+          :class="{'show' : showMenu}"
+      >
         <div class="profile-section pt-3 pt-lg-0">
           <img
               class="profile-image mb-3 rounded-circle mx-auto"
@@ -138,10 +147,14 @@ export default {
       currentDate: new Date(),
       linkedInIconClass: 'fa-fade',
       githubIconClass: 'fa-fade',
-      whatsappIconClass: 'fa-fade'
+      whatsappIconClass: 'fa-fade',
+      showMenu: false
     }
   },
   methods: {
+    toggleMenu() {
+      this.showMenu = !this.showMenu;
+    },
     onMouseHover(icon) {
       if ('linkedin' === icon) {
         this.linkedInIconClass = 'fa-bounce'

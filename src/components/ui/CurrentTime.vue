@@ -25,9 +25,8 @@ export default {
   },
   computed: {
     currentTime() {
-      const format = this.is12HourFormat ? 'h:mm a' : 'HH:mm';
-      const date = DateTime.now().setZone('America/Belize').toLocaleString({ day: 'numeric', month: 'long', year: 'numeric' });
-      return `${date} | ${DateTime.now().setZone('America/Belize').toFormat(format)}`;
+      const format = this.is12HourFormat ? 'ccc dd MMM yyyy | h:mm a' : 'ccc dd MMM yyyy | HH:mm';
+      return DateTime.now().setZone('America/Belize').toFormat(format);
     },
     hrShiftText() {
       return this.is12HourFormat ? 'Show 24 hrs' : 'Show 12 hrs';
