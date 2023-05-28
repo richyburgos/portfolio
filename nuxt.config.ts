@@ -12,7 +12,7 @@ export default defineNuxtConfig<NuxtConfig>({
     dev: true,
     env: { ...process.env },
     css: [
-        '@/assets/css/theme-6.css',
+        '@/assets/css/main.css',
         'bootstrap/dist/css/bootstrap.min.css',
         '@fortawesome/fontawesome-svg-core/styles.css'
     ],
