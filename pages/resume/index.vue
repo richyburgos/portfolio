@@ -10,34 +10,30 @@
 
 </template>
 
-<script>
-import {exportToPDF} from '#imports'
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+<script setup lang="ts">
+import { exportToPDF } from '#imports';
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import LeftPanel from "~/src/components/resume/LeftPanel.vue";
 import RightPanel from "~/src/components/resume/RightPanel.vue";
 
-export default {
-  components: {RightPanel, LeftPanel, FontAwesomeIcon},
-  methods: {
-    saveToPDF(fileName) {
-      const element = document.getElementById('resume');
-      console.log('ELEMENT', element)
-      // exportToPDF('FileName', 'Element', 'documentOptions', 'Options')
-      exportToPDF(fileName, element, {
-        orientation: 'p',
-        precision: 16,
-        unit: 'px',
-        // format: 'letter',
-        format: [816, 1056],
-        // format: [1000, 1056],
-        // format: [8.5, 11],
-        // putOnlyUsedFonts: true,
-        // floatPrecision: 'smart' // or "smart", default is 16
-      })
-    }
-  }
-}
+const saveToPDF = (fileName) => {
+  const element = document.getElementById('resume');
+  console.log('ELEMENT', element);
+  exportToPDF(fileName, element, {
+    orientation: 'p',
+    precision: 16,
+    unit: 'px',
+    format: [816, 1056],
+  });
+};
 
+useHead({
+  titleTemplate: (titleChunk) => {
+    return titleChunk ? `${titleChunk} - My Resumé` : 'My Resumé';
+  }
+})
+
+const components = { RightPanel, LeftPanel, FontAwesomeIcon };
 </script>
 
 <style scoped>

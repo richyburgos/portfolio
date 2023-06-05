@@ -41,10 +41,12 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "AboutIndex"
-}
+<script setup lang="ts">
+useHead({
+  titleTemplate: (titleChunk) => {
+    return titleChunk ? `${titleChunk} - About Me` : 'About Me';
+  }
+})
 </script>
 
 <style scoped>
