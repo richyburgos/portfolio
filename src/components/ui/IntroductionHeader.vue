@@ -2,16 +2,14 @@
   <section class="about-me-section p-3 px-lg-5 theme-bg-light">
     <div class="container">
       <div class="profile-teaser row">
-
         <div class="col">
-          <h3 class="name font-weight-bold mb-1">Richard Burgos</h3>
-
-          <div class="tagline mb-3">
+          <h3 class="name font-weight-bold mb-1">Richard A. Burgos</h3>
+          <div class="tagline mb-3 text-muted">
             <font-awesome-icon
                 size="xs"
                 :icon="['fas', 'terminal']"
             />
-            Application Developer
+            &nbsp;Application Developer
           </div>
           <div class="bio mb-4">
             <p>
@@ -19,20 +17,17 @@
               websites. With 7 years of experience under my belt, I specialize in both frontend and backend development
               using PHP, CSS, HTML, and JavaScript. I also have some expertise in managing WordPress sites.
             </p>
-
             <p>
               Collaboration is key to me, and I thrive in team environments. I love learning from others and sharing my
               knowledge to foster personal and team growth. When it comes to your projects, I go the extra mile to
               ensure timely delivery and find effective solutions for any challenges that arise.
             </p>
-
             <p>
               Creating solutions that are uniquely tailored to your requirements is something I excel at. I pride myself
               on delivering scalable and customized websites
               that meet your specific needs. Whether it's designing intuitive and visually appealing GUIs or keeping up
               with the latest technologies and techniques, I strive to provide the best service possible.
             </p>
-
             <p>
               I'm excited to work with you and help enhance or transform your website into something truly awesome.
               Let's embark on this journey together and make your online presence shine.
@@ -45,12 +40,10 @@
               <font-awesome-icon
                   :icon="['fas', 'file-alt']"
               />&nbsp;
-              <span class="d-none d-md-inline">View Resume</span>
-
+              View Resume
             </a>
           </div>
         </div>
-
         <div class="col-md-5 col-lg-5">
           <img
               class="profile-image img-fluid mb-3 mb-lg-0 me-md-0"

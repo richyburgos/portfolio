@@ -1,22 +1,24 @@
 <template>
   <header class="header text-center">
-    <h1 class="blog-name pt-lg-4 mb-0"><a
-        class="no-text-decoration"
-        href="/">Richard's Resume</a></h1>
+    <h1 class="blog-name pt-lg-4 mb-0">
+      <a
+          class="no-text-decoration"
+          href="/">
+        Richard's Resume
+      </a>
+    </h1>
     <nav class="navbar navbar-expand-lg">
       <button
-          @click="toggleMenu"
+          @click="toggleIcon"
           class="navbar-toggler text-white border-white"
-          :class="{'collapsed' : showMenu}"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navigation"
           aria-controls="navigation"
-          :aria-expanded="showMenu"
           aria-label="Toggle navigation">
         <font-awesome-icon
             :icon="['fas', 'burger']"
-            :class="{'fa-rotate-90': showMenu}"
+            :class="{'fa-rotate-90': rotateIcon, 'fa-default-position': !rotateIcon}"
             size="lg"
             fixed-width
         />
@@ -24,7 +26,6 @@
       <div
           id="navigation"
           class="navbar-collapse flex-column collapse"
-          :class="{'show' : showMenu}"
       >
         <div class="profile-section pt-3 pt-lg-0">
           <img
@@ -88,7 +89,7 @@
           </ul>
           <hr>
         </div>
-        <ul class="navbar-nav flex-column text-start">
+        <ul class="navbar-nav flex-column text-lg-start text-md-start">
           <li class="nav-item">
             <NuxtLink
                 class="my-nav-link"
@@ -148,12 +149,12 @@ export default {
       linkedInIconClass: 'fa-fade',
       githubIconClass: 'fa-fade',
       whatsappIconClass: 'fa-fade',
-      showMenu: false
+      rotateIcon: false
     }
   },
   methods: {
-    toggleMenu() {
-      this.showMenu = !this.showMenu;
+    toggleIcon() {
+      this.rotateIcon = !this.rotateIcon;
     },
     onMouseHover(icon) {
       if ('linkedin' === icon) {
@@ -203,6 +204,15 @@ export default {
 </script>
 
 <style scoped>
+.fa-rotate-90 {
+  transition: transform 0.5s ease-in-out;
+}
+
+.fa-default-position {
+  transition: transform 0.5s ease-in-out;
+  transform: rotate(0deg);
+}
+
 .my-nav-link {
   padding: 8px 8px 8px 8px;
   display: block;
