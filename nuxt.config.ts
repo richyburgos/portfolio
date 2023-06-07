@@ -25,7 +25,7 @@ export default defineNuxtConfig<NuxtConfig>({
                 {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
             ],
             script: [
-                {src: '_nuxt/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'},
+                {src: '/bootstrap.bundle.min.js'}
             ]
         }
     },
