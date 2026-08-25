@@ -21,12 +21,14 @@ export default {
   data() {
     return {
       is12HourFormat: true,
+      now: DateTime.now(),
+      intervalId: null,
     };
   },
   computed: {
     currentTime() {
       const format = this.is12HourFormat ? 'ccc dd MMM yyyy | h:mm a' : 'ccc dd MMM yyyy | HH:mm';
-      return DateTime.now().setZone('America/Belize').toFormat(format);
+      return this.now.setZone('America/Belize').toFormat(format);
     },
     hrShiftText() {
       return this.is12HourFormat ? 'Show 24 hrs' : 'Show 12 hrs';
@@ -37,6 +39,13 @@ export default {
       this.is12HourFormat = !this.is12HourFormat;
     },
   },
+  mounted() {
+    this.intervalId = setInterval(() => {
+      this.now = DateTime.now();
+    }, 1000);
+  },
+  beforeUnmount() {
+    clearInterval(this.intervalId);
+  },
 };
 </script>
-

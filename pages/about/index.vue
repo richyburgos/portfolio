@@ -21,12 +21,12 @@
               width="600"
               height="450"
               style="border:0;"
-              allowfullscreen=""
+              :allowfullscreen="false"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        <p>
+        <p class="mt-3">
           As a team player, I believe in sharing my experiences with colleagues to improve our productivity and
           knowledge base. I am always open to learning and constructive criticism to better my work ethic. I enjoy
           creating user-friendly and dynamic graphical user interfaces (GUIs) that are aesthetically pleasing, and I am

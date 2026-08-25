@@ -14,8 +14,8 @@
               :icon="['fa', 'home']"
               size="sm"
               fixed-width/>
-          <strong> Address:</strong>
-          <small> 2 1/2 Miles Philip Goldson Highway, Belize City, Belize, Central America</small>
+          <strong> Location:</strong>
+          <small> Belize City, Belize, Central America (GMT-6)</small>
           <br>
           <font-awesome-icon
               :icon="['fa', 'phone']"
@@ -36,7 +36,7 @@
               size="sm"
               fixed-width/>
           <strong> Email 2:</strong>
-          <small>&nbsp;<a href="mailto:richyburgos@live.com">richyburgos98@gmail.com</a></small>
+          <small>&nbsp;<a href="mailto:richyburgos98@gmail.com">richyburgos98@gmail.com</a></small>
         </p>
       </div>
     </div>
@@ -45,7 +45,8 @@
         <h5>LANGUAGES</h5>
         <p>
           Primary: English (Native)<br>
-          Secondary: Spanish (Intermediate)
+          Secondary: Belizean Creole (Native)<br>
+          Tertiary: Spanish (Basic Conversational)
         </p>
       </div>
     </div>
@@ -65,30 +66,22 @@
       <div class="col text-white">
         <h5>Skills</h5>
         <p>
-          Jira<br>
-          SCRUM<br>
-          Agile<br>
-          GIT<br>
-          WordPress Management<br>
           PHP<br>
-          CodeIgniter<br>
           Laravel<br>
-          Javascript<br>
-          VueJs<br>
+          CodeIgniter<br>
+          JavaScript &amp; TypeScript<br>
+          VueJs (2 &amp; 3)<br>
           Nuxt<br>
-          PostGres<br>
-          MySQL<br>
-          Oracle<br>
-          HTML<br>
-          Css<br>
+          HTML &amp; CSS / LESS / SCSS<br>
           Bootstrap<br>
-          Jira<br>
-          WireFraming<br>
-          Axure RP9<br>
-          Photoshop<br>
-          Customer Service<br>
-          Hardware Troubleshooting<br>
-          Training
+          MySQL / PostgreSQL / Oracle<br>
+          Git, Bitbucket &amp; GitHub<br>
+          Jira &amp; Agile/Scrum<br>
+          Jest<br>
+          WordPress Management<br>
+          Wireframing (Axure RP9, Figma)<br>
+          AI-Assisted Development (Claude, Cursor, WindSurf (Cascade))<br>
+          Customer Service &amp; Hardware Troubleshooting
         </p>
       </div>
     </div>

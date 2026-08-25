@@ -10,8 +10,8 @@
     <div class="row">
       <div class="col">
         <h5 class="profile-header">PROFILE</h5>
-        <p class="bio">I am a highly motivated programmer with over 5 years experience in application development
-          and troubleshooting for service and distribution companies. I enjoy tackling problems and coming up with
+        <p class="bio">I am a highly motivated programmer with over {{ yearsOfExperience }} of experience in application
+          development and troubleshooting for service and distribution companies. I enjoy tackling problems and coming up with
           innovative solutions. I am a team player that partakes in sharing any experience gained with colleagues to
           further our productivity and knowledge base.</p>
         <p>I am always willing to learn and take criticism seriously to better my work ethic. I enjoy creating
@@ -80,27 +80,23 @@
           <div class="col">
             <table class="table px-0 mx-0">
               <tr>
-                <td class="ps-0">Basic Networking</td>
-                <td>SQL(PostGres, Oracle, MySql)</td>
+                <td class="ps-0">PHP, JavaScript, TypeScript, HTML, CSS/LESS/SCSS</td>
+                <td>Laravel, Vue.js (2 &amp; 3), Nuxt, Bootstrap, CodeIgniter</td>
               </tr>
               <tr>
-                <td class="ps-0">MVC,HTML5, CSS, C#, C++, PHP and Javascript</td>
-                <td>FrameworksLaravel, Vue and CodeIgniter frameworks</td>
+                <td class="ps-0">Linux, Windows, Mac</td>
+                <td>Jest</td>
               </tr>
               <tr>
-                <td class="ps-0">Laptop and Desktop PC Repair</td>
-                <td>Wireframe design using Axure</td>
+                <td class="ps-0">MySQL, PostgreSQL, Oracle, SQLite, MongoDB</td>
+                <td>Git, Bitbucket, Jira, Figma, Axure RP9, Storybook, BrowserStack, NewRelic, AWS, Jenkins</td>
               </tr>
               <tr>
-                <td class="ps-0">Database wireframe design using Sparx Enterprise Architect</td>
-                <td>Intermediate knowledge in git version control</td>
+                <td class="ps-0">Claude, Cursor, ChatGPT, WindSurf (Cascade)</td>
+                <td>Problem Solving, Leadership, Wireframing, Customer Service, Trained in Accessibility (508 Compliance)</td>
               </tr>
               <tr>
-                <td class="px-0">Customer Service PR</td>
-                <td>Basic accounting</td>
-              </tr>
-              <tr>
-                <td class="ps-0">Can Speak, Read and Write Spanish (with basic competence)</td>
+                <td class="ps-0">Can Speak, Read and Write Spanish (basic conversational)</td>
               </tr>
             </table>
           </div>
@@ -116,10 +112,16 @@ import WorkExperienceItem from "~/src/components/resume/WorkExperienceItem.vue";
 import EducationItem from "~/src/components/resume/EducationItem.vue";
 import CertificationItem from "~/src/components/resume/CertificationItem.vue";
 import LeftPanel from "~/src/components/resume/LeftPanel.vue";
+import {useExperience} from "~/src/composables/useExperience";
 
 export default {
   components: {LeftPanel, CertificationItem, EducationItem, WorkExperienceItem, FontAwesomeIcon},
   name: "RightPanel",
+  computed: {
+    yearsOfExperience() {
+      return useExperience().full;
+    }
+  },
   data() {
     return {
       workExperiences: [
@@ -127,12 +129,33 @@ export default {
           id: 1,
           position: 'Application Developer',
           company: 'CUROTEC',
-          companyLocation: 'USA, Philadelphia, PA 19107',
-          duration: 'Oct 2022 - Feb 2023',
-          content: `CUROTEC is a software development company that provides custom software solutions to businesses of all sizes. They specialize in web development, mobile app development, enterprise software solutions, and e-commerce solutions. Curotec also offers services in digital marketing, cloud computing, and IT consulting. They have a team of experienced developers, designers, and project managers who work closely with clients to understand their unique business needs and deliver tailored solutions.`,
-          responsibilities: [
-            `Development, Modifications and Bugfixes`,
-            `Client contracted to was in need of developers that would modify existing components, develop new components or functionality as well as perform bugfixes on components that had logic errors.`
+          companyLocation: 'USA, Philadelphia, PA',
+          duration: '2022 - Present',
+          content: `Curotec is a software development company providing custom software solutions to businesses of all sizes, specializing in web and mobile development, enterprise software, and e-commerce. Responsibilities span frontend and backend development, bugfixes, and new feature implementation across multiple client engagements.`,
+          projects: [
+            {
+              title: `Client: Inside Real Estate`,
+              tasks: [
+                `Built and optimized frontend components using VueJS, Nuxt 2, LESS, Tailwind, and Figma, focusing on new features, bugfixes, and upgrading components to the Composition API.`,
+                `Developed backend systems with Laravel 6, handling API creation, maintenance, troubleshooting, and resolving data mismatches in MySQL and ElasticSearch.`,
+                `Utilized Cursor to assist in frontend and backend development, troubleshooting, and documenting large codebases.`,
+                `Led a full site rebranding effort, building the Navbar, key pages, and components from the ground up based on Figma designs.`,
+                `Integrated new APIs to create functionalities and reporting features that previously did not exist.`,
+              ]
+            },
+            {
+              title: `Client: Wolters Kluwer`,
+              tasks: [
+                `Developed backend systems using PHP, Laravel 5, and MySQL, creating and modifying queries, controllers, and resolving code issues.`,
+                `Built and modified frontend components using VueJS, LESS, Figma, and Storybook, creating new components based on Figma designs and documenting them in Storybook for demo purposes.`,
+                `Led an overhaul of the Navbar and key components, updating them to align with Figma designs and meet 508 accessibility compliance standards.`,
+                `Utilized screen readers and axeDevTools to identify and implement accessibility improvements.`,
+                `Assisted in leading standup meetings when the project manager or supervisor was unavailable.`,
+              ]
+            },
+          ],
+          technologies: [
+            `VueJS, Nuxt 2, Laravel 6, Laravel 5, PHP, LESS, Tailwind, MySQL, ElasticSearch, Figma, Lodash, Cursor, NewRelic, Storybook, axeDevTools`
           ]
         },
         {
@@ -171,7 +194,7 @@ export default {
             },
           ],
           technologies: [
-            `HTML, CSS, PHP, JavaScript, Go, VueJs 2, Laravel, CodeIgniter`,
+            `HTML, CSS, PHP, JavaScript, VueJs 2, Laravel, CodeIgniter`,
             `PostgreSQL, Oracle, MySql`,
             'Git, GitLab, BitBucket',
             'Axure RP, Sparx Enterprise Architect, Microsoft Office Suite'
@@ -179,7 +202,7 @@ export default {
         },
         {
           id: 3,
-          position: 'Analyst II / Technician',
+          position: 'IT Analyst & Technician',
           company: 'Bowen & Bowen Ltd.',
           companyLocation: 'Belize City, Belize',
           duration: '2015-2016',
@@ -297,7 +320,7 @@ export default {
         {
           id: 1,
           name: `The Web Developer Bootcamp`,
-          author: `Colt Steel`
+          author: `Colt Steele`
         },
         {
           id: 2,

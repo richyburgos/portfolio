@@ -13,9 +13,10 @@
           </div>
           <div class="bio mb-4">
             <p>
-              Hello there! I'm an experienced web developer with a passion for creating innovative and user-friendly
-              websites. With 7 years of experience under my belt, I specialize in both frontend and backend development
-              using PHP, CSS, HTML, and JavaScript. I also have some expertise in managing WordPress sites.
+              Hello there! I'm a full-stack web developer with {{ yearsOfExperience }} of experience building and
+              modernizing web applications. I specialize in both frontend and backend development
+              using PHP, CSS, HTML, and JavaScript. I also have some expertise in managing WordPress sites. My core focus is Laravel and Vue.js &mdash; from backend APIs and database
+              design to frontend component architecture.
             </p>
             <p>
               Collaboration is key to me, and I thrive in team environments. I love learning from others and sharing my
@@ -24,13 +25,13 @@
             </p>
             <p>
               Creating solutions that are uniquely tailored to your requirements is something I excel at. I pride myself
-              on delivering scalable and customized websites
-              that meet your specific needs. Whether it's designing intuitive and visually appealing GUIs or keeping up
-              with the latest technologies and techniques, I strive to provide the best service possible.
+              on delivering scalable, maintainable applications that meet your specific needs. Whether it's designing
+              intuitive and visually appealing interfaces or keeping up with the latest tools and techniques, I strive
+              to provide the best service possible.
             </p>
             <p>
-              I'm excited to work with you and help enhance or transform your website into something truly awesome.
-              Let's embark on this journey together and make your online presence shine.
+              I'm excited to work with you and help build, modernize, or maintain your application. Let's talk about
+              what you're working on.
             </p>
           </div>
           <div class="mb-4">
@@ -58,10 +59,16 @@
 <script>
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 import DetailsSection from "~/src/components/ui/DetailsSection.vue";
+import {useExperience} from "~/src/composables/useExperience";
 
 export default {
   name: "IntroductionHeader",
-  components: {DetailsSection, FontAwesomeIcon}
+  components: {DetailsSection, FontAwesomeIcon},
+  computed: {
+    yearsOfExperience() {
+      return useExperience().full;
+    }
+  }
 }
 </script>
 
