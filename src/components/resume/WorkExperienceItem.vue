@@ -1,48 +1,54 @@
 <template>
-  <div class="d-flex justify-content-between align-items-center">
-    <h6 class="text-start">{{ position }}</h6>
-    <span class="date text-end">{{ duration }}</span>
+  <div class="work-experience-item">
+    <div class="d-flex justify-content-between align-items-center">
+      <h6 class="text-start">{{ position }}</h6>
+      <span class="date text-end">{{ duration }}</span>
+    </div>
+    <div class="d-flex justify-content-between align-items-center">
+      <span class="company"><i>{{ company }}</i></span>
+      <span class="date text-end">{{ companyLocation }}</span>
+    </div>
+    <p>
+      {{ content }}
+    </p>
+    <template v-if="responsibilities.length">
+      <h6>Responsibilities:</h6>
+      <ul>
+        <li
+            v-for="(responsibility, index) in responsibilities"
+            :key="index">{{ responsibility }}</li>
+      </ul>
+    </template>
+    <template v-if="technologies.length">
+      <h6>Technologies Used:</h6>
+      <ul>
+        <li
+            v-for="technology in technologies"
+            :key="technology">{{ technology }}
+        </li>
+      </ul>
+    </template>
+    <template v-if="projects.length">
+      <h6>Projects:</h6>
+      <ul class="list-group">
+        <li
+            class="list-group-item"
+            v-for="project in projects"
+            :key="project.title">
+          {{ project.title }}
+          <ul
+              v-if="project.tasks && project.tasks.length"
+              class="list-group">
+            <li
+                v-for="(task, index) in project.tasks"
+                :key="index"
+                class="list-group-item">{{ task }}</li>
+          </ul>
+        </li>
+      </ul>
+    </template>
+    <hr>
   </div>
-  <div class="d-flex justify-content-between align-items-center">
-    <span class="company"><i>{{ company }}</i></span>
-    <span class="date text-end">{{ companyLocation }}</span>
-  </div>
-  <p>
-    {{ content }}
-  </p>
-  <template v-if="responsibilities.length">
-    <h6>Responsibilities:</h6>
-    <ul>
-      <li v-for="responsibility in responsibilities">{{ responsibility }}</li>
-    </ul>
-  </template>
-  <template v-if="technologies.length">
-    <h6>Technologies Used:</h6>
-    <ul>
-      <li
-          v-for="technology in technologies"
-          :key="technology">{{ technology }}
-      </li>
-    </ul>
-  </template>
-  <template v-if="projects.length">
-    <h6>Projects:</h6>
-    <ul class="list-group">
-      <li
-          class="list-group-item"
-          v-for="project in projects"
-          :key="project.title">
-        {{ project.title }}
-        <ul
-            class="list-group"
-            v-if="project.tasks"
-            v-for="task in project.tasks">
-          <li class="list-group-item">{{ task }}</li>
-        </ul>
-      </li>
-    </ul>
-  </template>
-  <hr>
 </template>
 
 <script>
@@ -110,4 +116,3 @@ p, li {
   color: #A9A9A9;
 }
 </style>
-
