@@ -33,8 +33,8 @@
               src="@/assets/images/self-portrait.jpeg"
               alt="image">
           <div class="bio mb-3">
-            My name is Richard Burgos, a web developer with over {{ yearsOfExperience }} of experience. I come from
-            a small country named Belize in Central America whose native language is english and timezone is CST(GMT-6).
+            My name is Richard Burgos, a full-stack web developer with over {{ yearsOfExperience }} of experience. I come from
+            a small country named Belize in Central America. English is my native language and I work in the CST (GMT-6) timezone.
             <br>
             <a href="/about">Find out more about me</a>
           </div>
@@ -139,13 +139,12 @@
 <script>
 import CurrentTime from "~/src/components/ui/CurrentTime.vue";
 import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import {useExperience} from "~/src/composables/useExperience";
 
 export default {
   components: {FontAwesomeIcon, CurrentTime},
   data() {
     return {
-      startDate: '2016-06-01',
-      currentDate: new Date(),
       linkedInIconClass: 'fa-fade',
       githubIconClass: 'fa-fade',
       whatsappIconClass: 'fa-fade',
@@ -181,24 +180,8 @@ export default {
   },
   computed: {
     yearsOfExperience() {
-      const start = new Date(this.startDate);
-
-      const yearsDiff = this.currentDate.getFullYear() - start.getFullYear();
-      const monthsDiff = this.currentDate.getMonth() - start.getMonth();
-
-      let duration = "";
-
-      if (yearsDiff > 0) {
-        duration += yearsDiff + (yearsDiff === 1 ? " Year " : " Years ");
-      }
-
-      if (monthsDiff > 0) {
-        duration += monthsDiff + (monthsDiff === 1 ? " Month" : " Months");
-      }
-
-      return duration.trim();
+      return useExperience().full;
     },
-
   }
 }
 </script>
