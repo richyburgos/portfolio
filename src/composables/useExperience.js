@@ -1,5 +1,6 @@
-export const CAREER_START_DATE = '2016-06-01' // Speednet start date — first full-time dev role
-export const VUE_START_DATE = '2018-06-01'
+export const TECH_INDUSTRY_START_DATE = '2015-03-01'; // Bowen & Bowen IT start date which was first role in the tech industry
+export const CAREER_START_DATE = '2016-06-01'; // Speednet start date — first full-time dev role
+export const VUE_START_DATE = '2018-06-01';
 
 /**
  * Returns a live "X Years Y Months" breakdown computed from any start date
@@ -38,4 +39,12 @@ export function useExperience() {
  */
 export function useVueExperience() {
     return calculateDuration(VUE_START_DATE)
+}
+
+/**
+ * Total tech industry experience (since TECH_INDUSTRY_START_DATE) — includes
+ * Bowen & Bowen IT support work prior to the first dev role.
+ */
+export function useTechIndustryExperience() {
+    return calculateDuration(TECH_INDUSTRY_START_DATE)
 }
