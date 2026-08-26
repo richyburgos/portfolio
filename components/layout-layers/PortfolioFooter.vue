@@ -4,10 +4,9 @@
       Created using Vue 3, Nuxt 3 and Bootstrap 5 by Richard Burgos
       <i>
         <a href="https://github.com/richyburgos/portfolio">
-          <font-awesome-icon
-              :icon="['fab', 'github']"
-              size="xl"
-              fixed-width
+          <font-awesome-icon :icon="['fab', 'github']"
+                             size="xl"
+                             fixed-width
           />
           See the project on Github
         </a>
@@ -17,10 +16,10 @@
 </template>
 
 <script>
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 export default {
-  components: {FontAwesomeIcon}
+  components: { FontAwesomeIcon }
 }
 </script>
 
