@@ -14,40 +14,45 @@
     <template v-if="responsibilities.length">
       <h6>Responsibilities:</h6>
       <ul>
-        <li
-            v-for="(responsibility, index) in responsibilities"
-            :key="index">{{ responsibility }}</li>
+        <li v-for="(responsibility, index) in responsibilities"
+            :key="index"
+        >
+          {{ responsibility }}
+        </li>
       </ul>
     </template>
     <template v-if="technologies.length">
       <h6>Technologies Used:</h6>
       <ul>
-        <li
-            v-for="technology in technologies"
-            :key="technology">{{ technology }}
+        <li v-for="technology in technologies"
+            :key="technology"
+        >
+          {{ technology }}
         </li>
       </ul>
     </template>
     <template v-if="projects.length">
       <h6>Projects:</h6>
       <ul class="list-group">
-        <li
+        <li v-for="project in projects"
+            :key="project.title"
             class="list-group-item"
-            v-for="project in projects"
-            :key="project.title">
+        >
           {{ project.title }}
-          <ul
-              v-if="project.tasks && project.tasks.length"
-              class="list-group">
-            <li
-                v-for="(task, index) in project.tasks"
+          <ul v-if="project.tasks && project.tasks.length"
+              class="list-group"
+          >
+            <li v-for="(task, index) in project.tasks"
                 :key="index"
-                class="list-group-item">{{ task }}</li>
+                class="list-group-item"
+            >
+              {{ task }}
+            </li>
           </ul>
         </li>
       </ul>
     </template>
-    <hr>
+    <hr />
   </div>
 </template>
 
