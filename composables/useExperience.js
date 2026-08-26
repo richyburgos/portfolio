@@ -19,8 +19,12 @@ export function calculateDuration(startDateString) {
     }
 
     const parts = []
-    if (years > 0) parts.push(`${years} ${years === 1 ? 'Year' : 'Years'}`)
-    if (months > 0) parts.push(`${months} ${months === 1 ? 'Month' : 'Months'}`)
+    if (years > 0) {
+        parts.push(`${years} ${years === 1 ? 'Year' : 'Years'}`);
+    }
+    if (months > 0) {
+        parts.push(`${months} ${months === 1 ? 'Month' : 'Months'}`);
+    }
 
     const full = parts.join(' ') || '0 Months'
 
