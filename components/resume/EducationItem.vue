@@ -27,6 +27,7 @@ export default {
       required: true
     },
     course: {
+      default: "",
       type: String,
       required: false
     }

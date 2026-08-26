@@ -2,9 +2,11 @@
   <div class="certificate-item mt-3">
     <div class="d-flex justify-content-between align-items-center">
       <h6 class="text-start">{{ courseName }}</h6>
-      <span
-          class="gray-clr text-end"
-          v-if="author">{{ author }}</span>
+      <span v-if="author"
+            class="gray-clr text-end"
+      >
+        {{ author }}
+      </span>
     </div>
   </div>
 </template>
@@ -19,6 +21,7 @@ export default {
     },
     author: {
       type: String,
+      default: "",
       required: false
     }
   }

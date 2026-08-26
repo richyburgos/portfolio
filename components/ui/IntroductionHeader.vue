@@ -5,9 +5,8 @@
         <div class="col">
           <h3 class="name font-weight-bold mb-1">Richard A. Burgos</h3>
           <div class="tagline mb-3 text-muted">
-            <font-awesome-icon
-                size="xs"
-                :icon="['fas', 'terminal']"
+            <font-awesome-icon size="xs"
+                               :icon="['fas', 'terminal']"
             />
             &nbsp;Application Developer
           </div>
@@ -35,9 +34,9 @@
             </p>
           </div>
           <div class="mb-4">
-            <a
-                class="btn btn-primary mb-3"
-                href="/resume">
+            <a class="btn btn-primary mb-3"
+               href="/resume"
+            >
               <font-awesome-icon
                   :icon="['fas', 'file-alt']"
               />&nbsp;
@@ -46,10 +45,10 @@
           </div>
         </div>
         <div class="col-md-5 col-lg-5">
-          <img
-              class="profile-image img-fluid mb-3 mb-lg-0 me-md-0"
-              src="@/assets/images/self-portrait.jpeg"
-              alt="">
+          <img class="profile-image img-fluid mb-3 mb-lg-0 me-md-0"
+               src="@/assets/images/self-portrait.jpeg"
+               alt=""
+          />
         </div>
       </div>
     </div>
@@ -57,13 +56,11 @@
 </template>
 
 <script>
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
-import DetailsSection from "~/src/components/ui/DetailsSection.vue";
-import {useExperience} from "~/src/composables/useExperience";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 export default {
   name: "IntroductionHeader",
-  components: {DetailsSection, FontAwesomeIcon},
+  components: { FontAwesomeIcon },
   computed: {
     yearsOfExperience() {
       return useExperience().full;

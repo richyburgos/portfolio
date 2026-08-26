@@ -37,33 +37,27 @@
 
 
         Check out my
-        <nuxt-link
-            to="/resume"
-            class="text-link">
+        <nuxt-link to="/resume"
+                   class="text-link"
+        >
           Online Resume
         </nuxt-link>
       </div>
       <div class="row row-cols-1 row-cols-md-4 g-4">
-        <DetailItems
-            v-for="item in detailItems"
-            :title="item.title"
-            :content="item.content"
-            :icons="item.icons"
+        <DetailItems v-for="item in detailItems"
+                     :key="item.id"
+                     :title="item.title"
+                     :content="item.content"
+                     :icons="item.icons"
         />
       </div>
-
     </div>
   </div>
 </template>
 
 <script>
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
-import DetailItems from "~/src/components/detail-items/DetailItems.vue";
-import {useExperience, useVueExperience, useTechIndustryExperience} from "~/src/composables/useExperience";
-
 export default {
   name: "DetailsSection",
-  components: {DetailItems, FontAwesomeIcon},
   computed: {
     yearsOfExperience() {
       return useExperience().full;
@@ -81,8 +75,8 @@ export default {
           title: 'JavaScript, VueJs, Nuxt, React',
           content: `I have ${this.vueYearsOfExperience} of experience with Vue.js (Vue 2 & Vue 3, including the Composition API), including building this site with Vue 3 and Nuxt 3. I'm also comfortable with JavaScript and TypeScript for building interactive, type-safe interfaces.`,
           icons: [
-            {id: 1, icon: ['fab', 'square-js'], color: '#F7DE20'},
-            {id: 2, icon: ['fab', 'vuejs'], color: '#41b784'},
+            { id: 1, icon: ['fab', 'square-js'], color: '#F7DE20' },
+            { id: 2, icon: ['fab', 'vuejs'], color: '#41b784' }
           ]
         },
         {
@@ -90,8 +84,8 @@ export default {
           title: 'PHP, Laravel, CodeIgniter',
           content: `With ${this.yearsOfExperience} of experience in PHP, primarily using Laravel, I'm comfortable maintaining, upgrading, and extending existing applications, building REST APIs, and working with Blade templates. I also have earlier experience with CodeIgniter.`,
           icons: [
-            {id: 1, icon: ['fab', 'php'], color: '#787cb4'},
-            {id: 2, icon: ['fab', 'laravel'], color: '#E82734'}
+            { id: 1, icon: ['fab', 'php'], color: '#787cb4' },
+            { id: 2, icon: ['fab', 'laravel'], color: '#E82734' }
           ]
         },
         {
@@ -99,7 +93,7 @@ export default {
           title: 'Database',
           content: `I have a comprehensive understanding of databases, including PostgreSQL, MySQL, and Oracle. Proficient in writing queries for select, update, insert, and delete operations, I can effectively utilize data to generate insightful reports.`,
           icons: [
-            {id: 1, icon: ['fas', 'database'], color: '#336997'}
+            { id: 1, icon: ['fas', 'database'], color: '#336997' }
           ]
         },
         {
@@ -107,8 +101,8 @@ export default {
           title: 'CSS',
           content: `I'm well-versed in CSS and LESS/SCSS, and can write custom, framework-free styles as needed \u2014 or use libraries like Bootstrap 5 when a component library speeds things along. I can adapt page layouts to fit your specific requirements, creating a user experience that's both functional and engaging.`,
           icons: [
-            {id: 1, icon: ['fa', 'file-code'], color: '#0091d4'},
-            {id: 2, icon: ['fab', 'bootstrap'], color: '#7432f9'}
+            { id: 1, icon: ['fa', 'file-code'], color: '#0091d4' },
+            { id: 2, icon: ['fab', 'bootstrap'], color: '#7432f9' }
           ]
         },
         {
@@ -116,7 +110,7 @@ export default {
           title: 'GIT',
           content: `I possess intermediate knowledge of Git version control, enabling smooth collaboration with other developers and teams following the Scrum Agile methodology.`,
           icons: [
-            {id: 1, icon: ['fab', 'git'], color: '#e44c31'}
+            { id: 1, icon: ['fab', 'git'], color: '#e44c31' }
           ]
         },
         {
@@ -124,7 +118,7 @@ export default {
           title: 'WordPress',
           content: `Whether you require a new WordPress site or assistance with managing existing projects, I can deliver. Offering expertise in maintenance, webpage modifications, security enhancements, and content management, I ensure optimal performance and user satisfaction.`,
           icons: [
-            {id: 1, icon: ['fab', 'wordpress'], color: '#3290cd'}
+            { id: 1, icon: ['fab', 'wordpress'], color: '#3290cd' }
           ]
         },
         {
@@ -132,7 +126,7 @@ export default {
           title: 'HTML',
           content: `With HTML expertise, I can adapt the interface to meet your specific requirements regardless of framework (Vue, Laravel, CodeIgniter, WordPress, etc.), including vanilla JavaScript for dynamic behavior when needed.`,
           icons: [
-            {id: 1, icon: ['fab', 'html5'], color: '#e56028'}
+            { id: 1, icon: ['fab', 'html5'], color: '#e56028' }
           ]
         },
         {
@@ -140,8 +134,8 @@ export default {
           title: 'My Environment',
           content: `I'm comfortable working in both Mac and Windows environments, adapting to whatever setup best suits a project. I use JetBrains PhpStorm as my primary IDE, along with Claude Code for AI-assisted development. On macOS I use NVM for Node version management, and I test across Chrome, Safari, Edge, Firefox, and other popular browsers to ensure cross-browser compatibility.`,
           icons: [
-            {id: 1, icon: ['fab', 'apple'], color: '#919191'},
-            {id: 2, icon: ['fab', 'windows'], color: '#05a3e3'}
+            { id: 1, icon: ['fab', 'apple'], color: '#919191' },
+            { id: 2, icon: ['fab', 'windows'], color: '#05a3e3' }
           ]
         }
       ];
