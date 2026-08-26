@@ -3,7 +3,7 @@
     <div class="jumbotron bg-light py-5 mb-5">
       <h2 class="text-center">
         RICHARD ALVARO BURGOS
-        <span class="developer-name"></span>
+        <span class="developer-name" />
       </h2>
       <p class="text-center">APPLICATION DEVELOPER</p>
     </div>
@@ -26,17 +26,16 @@
     <div class="row">
       <div class="col">
         <h5 class="work-experience-header">WORK EXPERIENCES (2007 - NOW)</h5>
-        <WorkExperienceItem
-            v-for="workExperience in workExperiences"
-            :key="workExperience.id"
-            :position="workExperience.position"
-            :company="workExperience.company"
-            :company-location="workExperience.companyLocation"
-            :duration="workExperience.duration"
-            :content="workExperience.content"
-            :responsibilities="workExperience.responsibilities"
-            :technologies="workExperience.technologies"
-            :projects="workExperience.projects"
+        <ResumeWorkExperienceItem v-for="workExperience in workExperiences"
+                                  :key="workExperience.id"
+                                  :position="workExperience.position"
+                                  :company="workExperience.company"
+                                  :company-location="workExperience.companyLocation"
+                                  :duration="workExperience.duration"
+                                  :content="workExperience.content"
+                                  :responsibilities="workExperience.responsibilities"
+                                  :technologies="workExperience.technologies"
+                                  :projects="workExperience.projects"
         />
       </div>
     </div>
@@ -45,30 +44,27 @@
         <h5 class="education-header">EDUCATION</h5>
         <div class="mt-4">
           <h6>SCHOOL</h6>
-          <EducationItem
-              v-for="education in educationItems"
-              :key="education.id"
-              :school="education.school"
-              :course="education.course"
-              :duration="education.duration"
-              :status="education.status"
+          <ResumeEducationItem v-for="education in educationItems"
+                               :key="education.id"
+                               :school="education.school"
+                               :course="education.course"
+                               :duration="education.duration"
+                               :status="education.status"
           />
         </div>
         <div class="mt-4">
           <h6>COURSES TAKEN</h6>
           <h6 class="text-center spaced my-4"><strong>UDEMY</strong></h6>
-          <CertificationItem
-              v-for="course in udemyCourses"
-              :key="course.id"
-              :author="course.author"
-              :course-name="course.name"
+          <ResumeCertificationItem v-for="course in udemyCourses"
+                                   :key="course.id"
+                                   :author="course.author"
+                                   :course-name="course.name"
           />
         </div>
         <h6 class="text-center spaced my-4"><strong>LARACAST</strong></h6>
-        <CertificationItem
-            v-for="course in laracastCourses"
-            :key="course.id"
-            :course-name="course.name"
+        <ResumeCertificationItem v-for="course in laracastCourses"
+                                 :key="course.id"
+                                 :course-name="course.name"
         />
       </div>
     </div>
@@ -107,21 +103,8 @@
 </template>
 
 <script>
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
-import WorkExperienceItem from "~/src/components/resume/WorkExperienceItem.vue";
-import EducationItem from "~/src/components/resume/EducationItem.vue";
-import CertificationItem from "~/src/components/resume/CertificationItem.vue";
-import LeftPanel from "~/src/components/resume/LeftPanel.vue";
-import {useExperience} from "~/src/composables/useExperience";
-
 export default {
-  components: {LeftPanel, CertificationItem, EducationItem, WorkExperienceItem, FontAwesomeIcon},
   name: "RightPanel",
-  computed: {
-    yearsOfExperience() {
-      return useExperience().full;
-    }
-  },
   data() {
     return {
       workExperiences: [
@@ -140,7 +123,7 @@ export default {
                 `Developed backend systems with Laravel 6, handling API creation, maintenance, troubleshooting, and resolving data mismatches in MySQL and ElasticSearch.`,
                 `Utilized Cursor to assist in frontend and backend development, troubleshooting, and documenting large codebases.`,
                 `Led a full site rebranding effort, building the Navbar, key pages, and components from the ground up based on Figma designs.`,
-                `Integrated new APIs to create functionalities and reporting features that previously did not exist.`,
+                `Integrated new APIs to create functionalities and reporting features that previously did not exist.`
               ]
             },
             {
@@ -150,9 +133,9 @@ export default {
                 `Built and modified frontend components using VueJS, LESS, Figma, and Storybook, creating new components based on Figma designs and documenting them in Storybook for demo purposes.`,
                 `Led an overhaul of the Navbar and key components, updating them to align with Figma designs and meet 508 accessibility compliance standards.`,
                 `Utilized screen readers and axeDevTools to identify and implement accessibility improvements.`,
-                `Assisted in leading standup meetings when the project manager or supervisor was unavailable.`,
+                `Assisted in leading standup meetings when the project manager or supervisor was unavailable.`
               ]
-            },
+            }
           ],
           technologies: [
             `VueJS, Nuxt 2, Laravel 6, Laravel 5, PHP, LESS, Tailwind, MySQL, ElasticSearch, Figma, Lodash, Cursor, NewRelic, Storybook, axeDevTools`
@@ -172,7 +155,7 @@ export default {
                 `GUI and database concepts and designs, analysis of data and processes.`,
                 `Develop new modules and edit existing ones for optimization or additional functionality.`,
                 `Maintain application and provide support.`,
-                `Create and update user guide for application.`,
+                `Create and update user guide for application.`
               ]
             },
             {
@@ -181,7 +164,7 @@ export default {
                 `GUI and database concepts and designs, analysis of data and processes.`,
                 `Develop new modules and edit existing ones for optimization or additional functionality.`,
                 `Maintain application and provide support.`,
-                `Create and update user guide for application.`,
+                `Create and update user guide for application.`
               ]
             },
             {
@@ -189,9 +172,9 @@ export default {
               tasks: [
                 `Maintained web service and web application.`,
                 `Designed and developed new views and backend functionality for ongoing services.`,
-                `Modified existing views and backend functionality.`,
+                `Modified existing views and backend functionality.`
               ]
-            },
+            }
           ],
           technologies: [
             `HTML, CSS, PHP, JavaScript, VueJs 2, Laravel, CodeIgniter`,
@@ -231,7 +214,7 @@ export default {
           responsibilities: [
             `Collect monies from customers for monies owed for accounts.`,
             `Assist in day-to-day activities in office procedures.`,
-            `Assist in upgrading written/manual accounting system to use of more modern technology such as cash registers that use QuickBooks POS and QuickBooks Enterprise for management of customer accounts.`,
+            `Assist in upgrading written/manual accounting system to use of more modern technology such as cash registers that use QuickBooks POS and QuickBooks Enterprise for management of customer accounts.`
           ],
           technologies: [
             'Quickbooks Accounting Pro',
@@ -249,11 +232,11 @@ export default {
             `Create timeline to allow for easier placement of ads and new programming to be aired using Sony Vegas.`,
             `Review content to be aired to ensure family friendly content.`,
             `Assist in creation of television series and assist in airing the content.`,
-            `Provide assistance where necessary for production to remain seamless.`,
+            `Provide assistance where necessary for production to remain seamless.`
           ],
           technologies: [
             'Sony Vegas Pro',
-            'Adobe Photoshop',
+            'Adobe Photoshop'
           ]
         },
         {
@@ -267,7 +250,7 @@ export default {
             `Provide support to customers.`,
             `Promote sales of products.`,
             `Delivery of products to customers.`,
-            `Perform cashier duties using QuickBooks Accounting software.`,
+            `Perform cashier duties using QuickBooks Accounting software.`
           ],
           technologies: ['Quickbooks Accounting Pro']
         },
@@ -313,8 +296,8 @@ export default {
         },
         {
           id: 2,
-          name: `Overview Of Laravel Framework`,
-        },
+          name: `Overview Of Laravel Framework`
+        }
       ],
       udemyCourses: [
         {
@@ -356,8 +339,13 @@ export default {
           id: 8,
           name: `React - The Complete Guide (incl Hooks, React Router, Redux) <Currently Enrolled>`,
           author: `Maximilian Schwarzmüller`
-        },
+        }
       ]
+    }
+  },
+  computed: {
+    yearsOfExperience() {
+      return useExperience().full;
     }
   }
 }
