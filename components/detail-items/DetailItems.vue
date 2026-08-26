@@ -2,14 +2,13 @@
   <div class="card px-0">
     <div class="card-header experience-card-bgd pt-3">
       <div class="d-flex justify-content-center">
-        <font-awesome-icon
-            v-for="(icon, index) in icons"
-            :key="index"
-            size="2xl"
-            fixed-width
-            :icon="icon.icon"
-            :style="{'color': icon.color, 'font-size': '50px'}"
-            class="item-icon"
+        <font-awesome-icon v-for="(icon, index) in icons"
+                           :key="index"
+                           size="2xl"
+                           fixed-width
+                           :icon="icon.icon"
+                           :style="{'color': icon.color, 'font-size': '50px'}"
+                           class="item-icon"
         />
       </div>
     </div>
@@ -24,7 +23,10 @@
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 export default {
-  name: "MyDetailItems",
+  name: "DetailItems",
+  components: {
+    FontAwesomeIcon
+  },
   props: {
     icons: {
       type: Array,
@@ -38,9 +40,6 @@ export default {
       type: String,
       required: true
     }
-  },
-  components: {
-    FontAwesomeIcon
   }
 };
 </script>
