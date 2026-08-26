@@ -1,20 +1,16 @@
 <template>
-  <div
-      id="resume"
-      class="container">
+  <div id="resume"
+       class="container"
+  >
     <div class="row">
-      <LeftPanel />
-      <RightPanel />
+      <ResumeLeftPanel />
+      <ResumeRightPanel />
     </div>
   </div>
-
 </template>
 
 <script setup lang="ts">
 import { exportToPDF } from '#imports';
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import LeftPanel from "~/src/components/resume/LeftPanel.vue";
-import RightPanel from "~/src/components/resume/RightPanel.vue";
 
 const saveToPDF = (fileName) => {
   const element = document.getElementById('resume');
@@ -32,8 +28,6 @@ useHead({
     return titleChunk ? `${titleChunk} - My Resumé` : 'My Resumé';
   }
 })
-
-const components = { RightPanel, LeftPanel, FontAwesomeIcon };
 </script>
 
 <style scoped>
